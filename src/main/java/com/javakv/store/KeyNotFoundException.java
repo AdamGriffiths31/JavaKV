@@ -8,21 +8,21 @@ package com.javakv.store;
  */
 public class KeyNotFoundException extends RuntimeException {
 
-    /**
-     * Constructs a new KeyNotFoundException with the specified key.
-     *
-     * @param key the key that was not found
-     */
-    public KeyNotFoundException(String key) {
-        super("Key not found: " + key);
-    }
+  /**
+   * Constructs a new KeyNotFoundException with the specified key.
+   *
+   * @param key the key that was not found
+   */
+  public KeyNotFoundException(String key) {
+    super("Key not found: " + key);
+  }
 
-    /**
-     * Constructs a new KeyNotFoundException with a custom message.
-     *
-     * @param message the detail message
-     */
-    public KeyNotFoundException(String message, Throwable cause) {
-        super(message, cause);
-    }
+  /**
+   * Constructs a new KeyNotFoundException with a custom message.
+   *
+   * @param message the detail message
+   */
+  public KeyNotFoundException(String message, Throwable cause) {
+    super(message, cause);
+  }
 }

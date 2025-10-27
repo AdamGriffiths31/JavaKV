@@ -150,6 +150,46 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!-- Checkstyle Plugin for code style enforcement -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>3.3.1</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.puppycrawl.tools</groupId>
+                        <artifactId>checkstyle</artifactId>
+                        <version>10.12.5</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <configLocation>google_checks.xml</configLocation>
+                    <consoleOutput>false</consoleOutput>
+                    <failsOnError>false</failsOnError>
+                    <violationSeverity>warning</violationSeverity>
+                    <skip>${checkstyle.skip}</skip>
+                </configuration>
+                <!-- Checkstyle is available via: mvn checkstyle:check -->
+                <!-- Not run automatically in build lifecycle -->
+            </plugin>
+
+            <!-- SpotBugs Plugin for bug detection -->
+            <!-- NOTE: SpotBugs currently does not support Java 21 (class file version 69) -->
+            <!-- Will be enabled once Java 21 support is added -->
+            <!-- See: https://github.com/spotbugs/spotbugs/issues/2724 -->
+            <!--
+            <plugin>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <version>4.8.3.0</version>
+                <configuration>
+                    <effort>Max</effort>
+                    <threshold>Low</threshold>
+                    <failOnError>false</failOnError>
+                </configuration>
+            </plugin>
+            -->
         </plugins>
     </build>
 </project>

@@ -13,31 +13,31 @@ package com.javakv.store;
  */
 public class StorageException extends RuntimeException {
 
-    /**
-     * Constructs a new StorageException with the specified detail message.
-     *
-     * @param message the detail message
-     */
-    public StorageException(String message) {
-        super(message);
-    }
+  /**
+   * Constructs a new StorageException with the specified detail message.
+   *
+   * @param message the detail message
+   */
+  public StorageException(String message) {
+    super(message);
+  }
 
-    /**
-     * Constructs a new StorageException with the specified detail message and cause.
-     *
-     * @param message the detail message
-     * @param cause the cause of the exception
-     */
-    public StorageException(String message, Throwable cause) {
-        super(message, cause);
-    }
+  /**
+   * Constructs a new StorageException with the specified detail message and cause.
+   *
+   * @param message the detail message
+   * @param cause the cause of the exception
+   */
+  public StorageException(String message, Throwable cause) {
+    super(message, cause);
+  }
 
-    /**
-     * Constructs a new StorageException with the specified cause.
-     *
-     * @param cause the cause of the exception
-     */
-    public StorageException(Throwable cause) {
-        super(cause);
-    }
+  /**
+   * Constructs a new StorageException with the specified cause.
+   *
+   * @param cause the cause of the exception
+   */
+  public StorageException(Throwable cause) {
+    super(cause);
+  }
 }

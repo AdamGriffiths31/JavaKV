@@ -21,9 +21,24 @@ mvn clean install
 # Run demo
 mvn compile exec:java -Dexec.mainClass="com.javakv.cli.Main"
 
-# Run tests
+# Run all tests (81 tests: 71 unit + 10 integration)
 mvn test
+
+# Run only unit tests (fast, ~0.5s)
+mvn test -Dgroups="!integration"
+
+# Run only integration tests (end-to-end with real WAL)
+mvn test -Dgroups="integration"
+
+# Run specific test class
+mvn test -Dtest=WalIntegrationTest
+
+# Generate coverage report
+mvn clean test jacoco:report
 
 # View coverage
 xdg-open target/site/jacoco/index.html
+
+# Run Checkstyle for code style checking
+mvn checkstyle:check
 ```
