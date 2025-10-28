@@ -60,12 +60,11 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Optional: CLI enhancement -->
+        <!-- CLI enhancement -->
         <dependency>
             <groupId>org.jline</groupId>
             <artifactId>jline</artifactId>
             <version>${jline.version}</version>
-            <optional>true</optional>
         </dependency>
     </dependencies>
 

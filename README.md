@@ -18,13 +18,13 @@ sudo pacman -S jdk21-openjdk maven
 # Build
 mvn clean install
 
-# Run demo
-mvn compile exec:java -Dexec.mainClass="com.javakv.cli.Main"
+# Run interactive CLI
+java -jar target/javakv.jar
 
-# Run all tests (81 tests: 71 unit + 10 integration)
+# Run all tests 
 mvn test
 
-# Run only unit tests (fast, ~0.5s)
+# Run only unit tests
 mvn test -Dgroups="!integration"
 
 # Run only integration tests (end-to-end with real WAL)
@@ -41,4 +41,17 @@ xdg-open target/site/jacoco/index.html
 
 # Run Checkstyle for code style checking
 mvn checkstyle:check
+```
+
+## CLI Commands
+
+```
+PUT <key> <value>    # Store a key-value pair
+GET <key>            # Retrieve a value
+DELETE <key>         # Remove a key
+EXISTS <key>         # Check if a key exists
+SIZE                 # Display number of entries
+CLEAR                # Remove all entries
+HELP                 # Display help
+EXIT                 # Exit
 ```
